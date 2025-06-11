@@ -5,7 +5,6 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Add your build steps here, e.g., sh 'mvn clean install'
-				bat 'mvn clean install'
 				bat 'mvn package'
 			}
         }
