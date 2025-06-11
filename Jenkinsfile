@@ -5,8 +5,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Add your build steps here, e.g., sh 'mvn clean install'
-				mvn package
-				java -cp target/hello-world-1.0-SNAPSHOT.jar com.example.App
+				sh 'mvn package'
+				sh 'java -cp target/hello-world-1.0-SNAPSHOT.jar com.example.App'
 			}
         }
         stage('Test') {
