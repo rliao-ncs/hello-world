@@ -5,8 +5,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Add your build steps here, e.g., sh 'mvn clean install'
-				sh 'mvn clean install'
-				sh 'mvn package'
+				bat 'mvn clean install'
+				bat 'mvn package'
 			}
         }
         stage('Test') {
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 // Add your deploy steps here, e.g., sh 'docker run ...'
-				sh 'java -cp target/hello-world-1.0-SNAPSHOT.jar com.example.App'
+				bat 'java -cp target/hello-world-1.0-SNAPSHOT.jar com.example.App'
             }
         }
     }
