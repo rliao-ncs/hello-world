@@ -7,14 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checking out...'
-                // Checkout the code from your version control system
-                git 'https://github.com/rliao-ncs/hello-world.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 echo 'Building...'
